@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>ABOUT</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500;600;700&display=swap');
+
+        body {
+            margin: 0;
+            user-select: none;
+            font-family: 'Antonio', sans-serif;
+        }
+        #about h1 {
+            margin-top: 5%;
+            letter-spacing: 1px;
+            text-shadow: 2px 4px 4px black;
+            color: white;
+            font-size: 70px;
+            text-align: center;
+        }
+        .flex-container {
+            height: 420px;
+            background: repeating-linear-gradient(120deg, white 0px, white 400px,
+            hsl(283, 46%, 42%) 250px, 
+            hsl(283, 46%, 42%) 
+            );
+            border-left: white;
+            right: 20%;
+        }
+        #img-div {
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            border: 1px solid white;
+            top: 10%;
+            margin-left: 200px;
+            background: white;
+            text-align: center;
+            position: relative;
+        }
+        #image {
+            border-radius: 50%;
+            position: absolute;
+            max-width: 300px;
+            top: 0;
+            right: 0;
+            left: -20px;
+            bottom: 0;
+            display: block;
+            margin: auto;
+            background: white;
+            padding: 10px 10px;
+        }
+        #title {
+            color: white;
+            font-weight: 500;
+            margin-left: 610px;
+            top: 35%;
+            left: 6%;
+            position: absolute;
+            letter-spacing: 3px;
+            text-shadow: 5px 10px 15px black;
+        }
+        #info {
+            font-size: 14px;
+            font-weight: normal;
+            margin: auto;
+            margin-left: 580px;
+            margin-top: -85px;
+            color: rgb(221, 213, 213);
+            text-align: justify;
+            padding-right: 15px;
+        }
+        #info::first-letter {
+            font-size: 50px;
+            color: black;
+            font-weight: bold;
+            letter-spacing: 5px;
+        }
+        .content {
+            margin-top: 10%;
+            height: 420px;
+            background: repeating-linear-gradient(-120deg, white 0px, white 400px,
+            hsl(116, 48%, 42%) 250px, 
+            hsl(116, 48%, 42%) 
+            );
+            border-left: white;
+            left: 20%;
+        }
+        #img {
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            border: 1px solid white;
+            top: 10%;
+            margin-left: 65%;
+            background: white;
+            text-align: center;
+            position: relative;
+        }
+        #picture {
+            border-radius: 50%;
+            position: absolute;
+            max-width: 300px;
+            top: 0;
+            right: 0;
+            left: -20px;
+            bottom: 0;
+            display: block;
+            margin: auto;
+            background: white;
+            padding: 10px 10px;
+        }
+        .joshua {
+            color: white;
+            font-weight: 500;
+            margin-right: 610px;
+            top: -65%;
+            left: 20%;
+            position: relative;
+            letter-spacing: 3px;
+            text-shadow: 5px 10px 15px black;
+        }
+        #propogo {
+            font-size: 14px;
+            font-weight: normal;
+            margin: auto;
+            margin-right: 590px;
+            margin-top: -320px;
+            text-align: justify;
+            color: rgb(221, 213, 213);
+            padding-left: 15px;
+        }
+        #propogo::first-letter {
+            font-size: 50px;
+            color: black;
+            font-weight: bold;
+            letter-spacing: 5px;
+        }
+        .third-content {
+            margin-top: 10%;
+            height: 420px;
+            background: repeating-linear-gradient(120deg, white 0px, white 400px,
+            hsl(241, 48%, 42%) 250px, 
+            hsl(241, 48%, 42%) 
+            );
+            border-left: white;
+            right: 20%;
+        }
+        #third-img {
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            border: 1px solid white;
+            top: 10%;
+            margin-left: 200px;
+            background: white;
+            text-align: center;
+            position: relative;
+        }
+        #third-picture {
+            border-radius: 50%;
+            position: absolute;
+            max-width: 300px;
+            top: 0;
+            right: 0;
+            left: -20px;
+            bottom: 0;
+            display: block;
+            margin: auto;
+            background: white;
+            padding: 10px 10px;
+        }
+        .third-joshua {
+            color: white;
+            font-weight: 500;
+            margin-left: 610px;
+            top: 190%;
+            left: 15%;
+            position: absolute;
+            letter-spacing: 3px;
+            text-shadow: 5px 10px 15px black;
+        }
+        .third-list {
+            padding-left: 45%;
+           margin-top: -6%;
+           display: flex;
+           justify-content: space-evenly;
+           color: rgb(221, 213, 213);
+        }
+        ::marker {
+            color: goldenrod;
+            font-size: 23px;
+        }
+        .third-text .list ul li {
+            font-weight: normal;
+            margin: auto;
+            text-align: center;
+            padding-left: 20%;
+        }
+        .content-favorite {
+            margin-top: 10%;
+            height: 420px;
+            background: repeating-linear-gradient(-120deg, white 0px, white 400px,
+            hsl(358, 48%, 43%) 250px, 
+            hsl(358, 48%, 43%)
+            );
+            border-left: white;
+            left: 20%;
+        }
+        #img-favorite {
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            border: 1px solid white;
+            top: 10%;
+            margin-left: 65%;
+            background: white;
+            text-align: center;
+            position: relative;
+        }
+        #picture-favorite {
+            border-radius: 50%;
+            position: absolute;
+            max-width: 300px;
+            top: 0;
+            right: 0;
+            left: -20px;
+            bottom: 0;
+            display: block;
+            margin: auto;
+            background: white;
+            padding: 10px 10px;
+        }
+        .joshua-favorite{
+            color: white;
+            font-weight: 500;
+            margin-right: 610px;
+            top: -65%;
+            left: 15%;
+            position: relative;
+            letter-spacing: 3px;
+            text-shadow: 5px 10px 15px black;
+        }
+        #propogo-favorite {
+            font-size: 14px;
+            font-weight: normal;
+            margin: auto;
+            margin-right: 590px;
+            margin-top: -320px;
+            color: rgb(221, 213, 213);
+            text-align: justify;
+            padding-left: 15px;
+        }
+        #propogo-favorite::first-letter {
+            font-size: 50px;
+            color: black;
+            font-weight: bold;
+            letter-spacing: 5px;
+        }
+        .content-skew {
+            margin-top: 10%;
+            height: 420px;
+            background: repeating-linear-gradient(120deg, white 0px, white 400px,
+            hsl(173, 48%, 42%) 250px, 
+            hsl(173, 48%, 42%)
+            );
+            border-left: white;
+            right: 20%;
+        }
+        #motto-img {
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            border: 1px solid white;
+            top: 10%;
+            margin-left: 200px;
+            background: white;
+            text-align: center;
+            position: relative;
+        }
+        #motto-picture {
+            border-radius: 50%;
+            position: absolute;
+            max-width: 300px;
+            top: 0;
+            right: 0;
+            left: -20px;
+            bottom: 0;
+            display: block;
+            margin: auto;
+            background: white;
+            padding: 10px 10px;
+        }
+        .motto {
+            color: white;
+            font-weight: 500;
+            margin-left: 610px;
+            top: 355%;
+            left: 15%;
+            position: absolute;
+            letter-spacing: 3px;
+            text-shadow: 5px 10px 15px black;
+        }
+        .skew {
+            font-size: 14px;
+            font-weight: normal;
+            margin: auto;
+            margin-left: 580px;
+            margin-top: -70px;
+            color: rgb(221, 213, 213);
+            text-align: justify;
+            padding-right: 20px;
+            text-transform: uppercase;
+        }
+        .skew::first-letter {
+            font-size: 50px;
+            color: black;
+            font-weight: bold;
+            letter-spacing: 5px;
+        }
+        .social {
+            background: black;
+            text-align: center;
+        }
+         .social i {
+            color: goldenrod;
+            padding: 15px 20px;
+        }
+    </style>
+</head>
+<body>
+    <section id="about">
+        <h1>ABOUT ME</h1>
+        <div class="flex-container">
+            <div id="img-div">
+                <img src="picture.jpg" id="image" alt="Joshua">
+            </div>
+            <h1 id="title" style="font-size: 80px;">SELF INTRODUCTION</h1>
+            <p id="info">Hello, I'm Joshua Propogo live from Paulog, Ligao City, Albay. I am 20 year's old now turning 21 on September 7 2022, next year.
+             I completed in High School at Ligao National High School (LNHS) and also I graduted in Senior High School at Infotech Development System Colleges, Inc. (IDSC).
+            I am now College at Bicol University - Polangui Campus taking Bachelor of Science in Information Technology. I wanna be a Web Developer someday and I hope more learnings and improvement that I can take and 
+         kind of skills that I have.</p>
+        </div>
+    </section>
+
+    <section class="second-main">
+        <div class="content">
+            <div id="img">
+                <img src="dogs.jpg" id="picture" alt="Dogs" height="98%">
+            </div>
+            <h1 class="joshua" style="font-size: 80px;">PETS</h1>
+            <p id="propogo">I love dogs and I have puppies also in my house. They are my stress reliever even I'm tired at school, they are waiting and hugs for me so that I felt happy and safe with my dogs. 
+                They are so cute for me and adorable even their smile when I accidentally capture them, they are so cute I hope they last me until I'm old.
+            I have one lost dog that I'll forget because He follows me wherever what I can do for him and He cares and guarded by my side when I'm sick so I love him and I will never ever forget him.</p>
+        </div>
+    </section>
+
+    <section class="third-main">
+        <div class="third-content">
+            <div id="third-img">
+                <img src="hobbies.jpg" id="third-picture" alt="Joshua" height="99%">
+            </div>
+            <h1 class="third-joshua" style="font-size: 80px;">HOBBIES</h1>
+            <div class="third-list">
+          <ul class="third-text">
+              <li>
+                  Coding
+                  <ul>
+                      <li>Programming</li>
+                      <li>Developer</li>
+                  </ul>
+              </li>
+          </ul>
+          <ul class="third-text">
+              <li>
+                  Web Developer Languange
+                  <ul class="list">
+                      <li>HTML</li>
+                      <li>CSS</li>
+                  </ul>
+              </li>
+          </ul>
+          <ul class="third-text">
+              <li>
+                  Programming Languange
+                  <ul>
+                      <li>JAVASCRIPT</li>
+                      <li>C++</li>
+                  </ul>
+              </li>
+          </ul>
+          </div>
+          <div class="third-list" style="padding-top: 6%;">
+              <ul>
+                  <li>Singing</li>
+              </ul>
+          </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="content-favorite">
+            <div id="img-favorite">
+                <img src="favorite.jpg" id="picture-favorite" alt="Favorite" height="98%">
+            </div>
+            <h1 class="joshua-favorite" style="font-size: 80px;">FAVORITES</h1>
+            <p id="propogo-favorite">I have so many favorites and I love it. For foods I love chicken and adobo. For dessert also I love cake and Ice cream. 
+            In music I love some of it specially in Singing because I love to sing a song and sing at Videoke. I play guitar and I want to learn piano then to collab with my friends. I also favorite in reading specially about programming books and web developer books so that I have a skill to code on website. 
+            I love soccers and badminton because both of these two are my favorites in Sports or in Reactional Activity.   </p>
+        </div>
+    </section>
+
+    <section>
+        <div class="content-skew">
+            <div id="motto-img">
+                <img src="imagedeveloper.jpg" id="motto-picture" alt="Motto" height="98%">
+            </div>
+            <h1 class="motto" style="font-size: 80px;">MOTTO</h1>
+            <p class="skew">“When to use iterative development? You should use iterative development only on projects that you want to succeed.” – Martin Fowler</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i></a>
+            <i class="fab fa-instagram"></i></a>
+            <i class="fab fa-youtube"></i></a>
+            <i class="fab fa-google"></i></a>
+            </div>
+    </footer>
+</body>
+</html>

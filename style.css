@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500;600;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Antonio', sans-serif;
+}
+.header {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background: lightgray;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    background: rgb(0, 0, 0, 0.2);
+    box-shadow: 2px 4px 10px rgb(0, 0, 0, 0.7);
+}
+img {
+    width: 150px;
+    padding-left: 4%;
+}
+.nav {
+    padding-right: 10%;
+    overflow: hidden;
+    padding: 8px 12px;
+}
+.nav a {
+    text-decoration: none;
+    padding: 20px 35px;
+    color: white;
+    font-size: 18px;
+}
+.nav a:hover {
+    background: black;
+    color: white;
+    transition: .7s;
+}
+.nav .search {
+    float: left;
+    margin-left: -20%;
+    position: absolute;
+    z-index: 5;
+}
+.search input[type=text] {
+    padding: 15px;
+    border: none;
+    margin-top: -9px;
+    font-size: 15px;
+    width: 100%;
+}
+ .form-class .btn {
+    float: left;
+    padding: 15px;
+    margin-top: -9px;
+    border: none;
+    font-size: 15px;
+    margin-left: -60px;
+    background: lightgray;
+    width: 60px;
+}
+.active {
+    background: black;
+    color: white;
+}
+.image {
+    text-align: center;
+}
+.image img {
+    width: 50%;
+    bottom: 25%;
+    position: relative;
+    z-index: 5;
+    filter: drop-shadow(10px 5px 10px rgb(0, 0, 0, 0.7));
+}
+.image h1 {
+   font-size: 160px;
+   bottom: 40%;
+   left: 8%;
+   color:white;
+   text-shadow: 5px 15px 15px rgb(0, 0, 0, 0.7);
+   font-family: 'Bangers', cursive;
+   position: absolute;
+}
+.image p {
+    text-shadow: 5px 10px 15px rgb(0, 0, 0);
+    font-size: 55px;
+    position: absolute;
+    bottom: 20%;
+    left: 17%;
+    color: white;
+    z-index: 5;
+}
+.image .btn {
+    position: absolute;
+    text-decoration: none;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 15px 25px;
+    background: white;
+    color: black;
+    top: 86%;
+    right: 47%;
+    z-index: 5;
+    font-weight: bold
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+button {
+    background-color: green;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+button:hover {
+    opacity: 0.8;
+}
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    margin-left: -80%;
+}
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+img.avatar {
+    width: 30%;
+    border-radius: 50%;
+}
+.container {
+    padding: 16px;
+}
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 5000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 80%;
+}
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close:hover, .close:focus {
+    color: red;
+    cursor: pointer;
+}
+.animate {
+    animation: animatezoom 0.6s;
+}
+@keyframes animatezoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+
+.image .btn:hover {
+   background: black;
+    color: white;
+}
+.main {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 80vh;
+}
+.main .card {
+    position: relative;
+    width: 350px;
+    height: 400px;
+    padding-left: 2%;
+    background: rgb(250, 231, 231);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.main .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgb(0, 0, 0, 0.5);
+}
+.main .card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0, 0.3);
+    pointer-events: none;
+    z-index: 1;
+}
+.percent {
+    position: relative;
+    height: 200px;
+    border-radius: 50%;
+}
+.percent .number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: rgb(0, 0, 0, 0.8);
+}
+.percent .number h2 {
+    font-weight: 700;
+    font-size: 50px;
+    transition: 0.5s;
+}
+.card:hover .percent .number h2 {
+    font-size: 80px;
+    color: black;
+}
+.percent .number h2 span {
+    font-size: 26px;
+    color: rgb(0, 0, 0, 0.8);
+}
+.card:hover .percent .number h2 span {
+    color: black;
+}
+.text {
+    position: relative;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    margin-top: 30px;
+    margin-right: 10%;
+    color: rgb(0, 0, 0, 0.8);
+}
+.card:hover .text {
+    color: black;
+}
+svg {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    z-index: 1000;
+}
+svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: black;
+    stroke-width: 12;
+    stroke-linecap: round;
+    transform: translate(6px, 6px);
+}
+svg circle:nth-child(2) {
+    stroke-dasharray: 630;
+    stroke-dashoffset: 630;
+}
+.card:nth-child(1) circle:nth-child(2) {
+    stroke-dashoffset: calc(630 - (630 * 95) / 100);
+    stroke: green;
+}
+.card:nth-child(2) circle:nth-child(2) {
+    stroke-dashoffset: calc(630 - (630 * 90) / 100);
+    stroke: yellow;
+}
+.card:nth-child(3) circle:nth-child(2) {
+    stroke-dashoffset: calc(630 - (630 * 80) / 100);
+    stroke: red;
+}
+.main-content {
+    background: lightgray;
+    position: relative;
+    margin-top: 10px;
+}
+.main-content img {
+    width: 40%;
+    margin-top: -8%;
+    position: absolute;
+}
+.row {
+    display: grid;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-left: 40%;
+}
+.content-col {
+    border-radius: 10px;
+    background: rgb(250, 231, 231);
+    box-shadow: 5px 10px 15px rgb(0, 0, 0, 0.7);
+    margin: 10px;
+    padding: 30px 30px;
+    user-select: none;
+}
+.content-col p {
+    color: rgb(0, 0, 0, 0.7);
+}
+.family {
+    padding-top: 8%;
+    text-align: center;
+    margin: 0;
+}
+.family h1 {
+    text-shadow: 4px 4px 4px black;
+    color: white;
+    font-weight: bold;
+    font-size: 70px;
+    padding-bottom: 4%;
+    user-select: none;
+}
+.family .wor {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 5%;
+}
+.family-col {
+    border-radius: 20px;
+    flex-basis: 30%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 10px 20px 20px rgb(68, 63, 63);
+}
+.family-col img {
+    width: 100%;
+    display: block;
+    margin-left: -16px;
+}
+.family-col:hover .overlay {
+    background: rgb(0, 129, 0, 0.7);
+    bottom: 0;
+    height: 100%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.overlay {
+    height: 0;
+    width: 100%;
+    bottom: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.name {
+    white-space: nowrap;
+    color: white;
+    display: block;
+    font-size: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    overflow: hidden;
+}
+.comment {
+    background: lightgray;
+    text-align: center;
+    margin-top: 6%;
+}
+.comment h1 {
+    text-shadow: 4px 4px 4px black;
+    color: white;
+    font-weight: bold;
+    font-size: 70px;
+    padding-bottom: 4%;
+    user-select: none;
+}
+.co-col {
+    display: flex;
+    width: auto;
+    justify-content: center;
+    padding-top: 10px;
+}
+.co-col .people {
+    background: rgb(250, 231, 231);
+    margin: 5px;
+    margin-bottom: 50px;
+    width: 300px;
+    padding: 20px;
+    line-height: 20px;
+    color: rgb(0, 0, 0, 0.7);
+    position: relative;
+}
+.co-col .people h3 {
+    color: black;
+    font-size: 26px;
+    margin-top: 50px;
+    padding-bottom: 15px;
+    font-weight: 900;
+}
+.co-col .people p {
+    font-size: 14px;
+    margin: 12px 0;
+}
+.co-col .people .comment-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 10px;
+    background: rgb(250, 231, 231);
+}
+.co-col .people .comment-image img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+}
+.footer {
+    background: rgb(0, 0, 0, 0.7);
+    box-sizing: border-box;
+    color: white;
+    padding-top: 15px;
+   display: flex;
+   text-align: center;
+   justify-content: center;
+   flex-direction: column;
+}
+.footer h3 {
+    font-size: 25px;
+    text-shadow: 4px 4px 4px black;
+    padding-bottom: 8px;
+}
+.footer p {
+    font-size: 14px;
+}
+.footer .fab fa {
+    display: flex;
+}
+.footer-content {
+    margin: 16px;
+}
+.footer-content .icons {
+    padding-top: 10px;
+}
+.footer-content .icons h4 {
+    text-shadow: 4px 4px 4px black;
+}
+.footer-content .icons a {
+    padding: 12px 18px;
+    color: white;
+}
+.footer-content .icons a:hover {
+    color: goldenrod;
+}
+.footer-bottom {
+    background: black;
+    color: white;
+    text-align: center;
+}
+.footer-bottom h3 {
+    font-size: 15px;
+    padding-top: 10px;
+    font-family: lucida handwriting;
+}
+.footer-bottom p {
+    font-size: 14px;
+}
+

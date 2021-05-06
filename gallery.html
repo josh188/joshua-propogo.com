@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALLERY</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Antonio', sans-serif;
+        }
+        input {
+            display: none;
+        }
+        .container {
+            width: 100%;
+            text-align: center;
+            user-select: none;
+        }
+        h1 {
+            text-shadow: 2px 4px 4px black;
+            color: white;
+            font-weight: normal;
+            font-size: 70px;
+            font-weight: normal;
+            position: relative;
+            margin: 40px 0;
+            animation: animate 4s linear infinite;
+        }
+        @keyframes animate {
+            0% {
+                font-weight: normal;
+            }
+            50% {
+                font-weight: 500;
+            }
+            100% {
+                font-weight: bolder;
+            }
+        }
+        .top-content {
+            background: rgb(231, 229, 229);
+            width: 90%;
+            margin: 0 auto 20px auto;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            box-shadow: 3px 3px 5px lightgray;
+        }
+        h3 {
+            height: 100%;
+            background: rgb(223, 222, 222);
+            line-height: 60px;
+            padding: 0 50px;
+            color: white;
+        }
+        label {
+            display: inline-block;
+            height: 100%;
+            padding: 0 5px;
+            margin: 0 50px;
+            line-height: 60px;
+            font-size: 18px;
+            color: gray;
+            cursor: pointer;
+            transition: .5s;
+        }
+        label:hover {
+            color: black;
+        }
+        .photo-gallery {
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 15px;
+        }
+        .pic {
+            position: relative;
+            height: 230px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: .5s;
+        }
+        .pic img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            transition: .5s;
+        }
+        .pic img:hover {
+            box-shadow: 0 15px 35px rgb(0, 0, 0, 0.5);
+            transform: translateY(-5px);
+            opacity: 0.8;
+        }
+        #check1:checked ~ .container .photo-gallery .pic {
+            opacity: 1;
+            transform: scale(1);
+            position: relative;
+            transition: .5s;
+        }
+        #check2:checked ~ .container .photo-gallery .photos {
+            opacity: 1;
+            transform: scale(1);
+            position: relative;
+            transition: .5s;
+        }
+        #check2:checked ~ .container .photo-gallery .friends, 
+        #check2:checked ~ .container .photo-gallery .classmates, 
+        #check2:checked ~ .container .photo-gallery .family, 
+        #check2:checked ~ .container .photo-gallery .place {
+            opacity: 0;
+            transform: scale(0);
+            position: absolute;
+            transition: 0s;
+        }
+        #check3:checked ~ .container .photo-gallery .friends {
+            opacity: 1;
+            transform: scale(1);
+            position: relative;
+            transition: .5s;
+        }
+        #check3:checked ~ .container .photo-gallery .classmates, 
+        #check3:checked ~ .container .photo-gallery .family, 
+        #check3:checked ~ .container .photo-gallery .place, 
+        #check3:checked ~ .container .photo-gallery .photos {
+            opacity: 0;
+            transform: scale(0);
+            position: absolute;
+            transition: 0s;
+        }
+        
+        #check4:checked ~ .container .photo-gallery .classmates {
+            opacity: 1;
+            transform: scale(1);
+            position: relative;
+            transition: .5s;
+        }
+        #check4:checked ~ .container .photo-gallery .family, 
+        #check4:checked ~ .container .photo-gallery .place, 
+        #check4:checked ~ .container .photo-gallery .photos, 
+        #check4:checked ~ .container .photo-gallery .friends {
+            opacity: 0;
+            transform: scale(0);
+            position: absolute;
+            transition: 0s;
+        }
+        
+        #check5:checked ~ .container .photo-gallery .family {
+            opacity: 1;
+            transform: scale(1);
+            position: relative;
+            transition: .5s;
+        }
+        #check5:checked ~ .container .photo-gallery .place, 
+        #check5:checked ~ .container .photo-gallery .photos, 
+        #check5:checked ~ .container .photo-gallery .friends, 
+        #check5:checked ~ .container .photo-gallery .classmates {
+            opacity: 0;
+            transform: scale(0);
+            position: absolute;
+            transition: 0s;
+        }
+    </style>
+</head>
+<body>
+    <input type="radio" name="Photos" id="check1" checked>
+    <input type="radio" name="Photos" id="check2">
+    <input type="radio" name="Photos" id="check3">
+    <input type="radio" name="Photos" id="check4">
+    <input type="radio" name="Photos" id="check5">
+
+    <div class="container">
+        <h1>MY GALLERY</h1>
+        <div class="top-content">
+            <h3>PHOTOS</h3>
+            <label for="check1">All Photos</label>
+            <label for="check2">Your Photos</label>
+            <label for="check3">Friend's Photos</label>
+            <label for="check4">Classmate's Photos</label>
+            <label for="check5">Family Photos</label>
+        </div>
+
+        <div class="photo-gallery">
+            <div class="pic place">
+                <img src="place1.jpg">
+            </div>
+            <div class="pic photos">
+                <img src="your photo1.jpg">
+            </div>
+            <div class="pic friends">
+                <img src="friends1.jpg">
+            </div>
+            <div class="pic classmates">
+                <img src="classmate1.jpg">
+            </div>
+            <div class="pic family">
+                <img src="picture.jpg">
+            </div>
+            <div class="pic place">
+                <img src="place2.jpg">
+            </div>
+            <div class="pic photos">
+                <img src="your photo2.jpg">
+            </div>
+            <div class="pic friends">
+                <img src="friends2.jpg">
+            </div>
+            <div class="pic classmates">
+                <img src="classmate2.jpg">
+            </div>
+            <div class="pic family">
+                <img src="johnpaul.jpg">
+            </div>
+            <div class="pic place">
+                <img src="place3.jpg">
+            </div>
+            <div class="pic photos">
+                <img src="your photo3.jpg">
+            </div>
+            <div class="pic friends">
+                <img src="friends3.jpg">
+            </div>
+            <div class="pic classmates">
+                <img src="classmate3.jpg">
+            </div>
+            <div class="pic family">
+                <img src="jan.jpg">
+            </div>
+            <div class="pic place">
+                <img src="place4.jpg">
+            </div>
+            <div class="pic photos">
+                <img src="your photo4.jpg">
+            </div>
+            <div class="pic friends">
+                <img src="friends4.jpg">
+            </div>
+            <div class="pic classmates">
+                <img src="classmate4.jpg">
+            </div>
+            <div class="pic family">
+                <img src="jerwin.jpg">
+            </div>
+            <div class="pic place">
+                <img src="place5.jpg">
+            </div>
+            <div class="pic photos">
+                <img src="your photo5.jpg">
+            </div>
+            <div class="pic friends">
+                <img src="friends5.jpg">
+            </div>
+            <div class="pic classmates">
+                <img src="classmate5.jpg">
+            </div>
+            <div class="pic family">
+                <img src="papa.jpg">
+            </div>
+            <div class="pic place">
+                <img src="place6.jpg">
+            </div>
+            <div class="pic photos">
+                <img src="your photo6.jpg">
+            </div>
+            <div class="pic friends">
+                <img src="friends6.jpg">
+            </div>
+            <div class="pic classmates">
+                <img src="classmate6.jpg">
+            </div>
+            <div class="pic family">
+                <img src="mama.jpg">
+            </div>
+            <div class="pic place">
+                <img src="place7.jpg">
+            </div>
+            <div class="pic photos">
+                <img src="your photo7.jpg">
+            </div>
+            <div class="pic friends">
+                <img src="friends7.jpg">
+            </div>
+            <div class="pic classmates">
+                <img src="classmate7.jpg">
+            </div>
+            <div class="pic family">
+                <img src="family7.jpg">
+            </div>
+            <div class="pic place">
+                <img src="place8.jpg">
+            </div>
+            <div class="pic photos">
+                <img src="your photo8.jpg">
+            </div>
+            <div class="pic friends">
+                <img src="friends8.jpg">
+            </div>
+            <div class="pic classmates">
+                <img src="classmate8.jpg">
+            </div>
+            <div class="pic family">
+                <img src="family8.jpg">
+            </div>
+            <div class="pic place">
+                <img src="place9.jpg">
+            </div>
+            <div class="pic photos">
+                <img src="your photo9.jpg">
+            </div>
+            <div class="pic friends">
+                <img src="friends9.jpg">
+            </div>
+            <div class="pic classmates">
+                <img src="classmate9.jpg">
+            </div>
+            <div class="pic family">
+                <img src="family9.jpg">
+            </div>
+            <div class="pic place">
+                <img src="place10.jpg">
+            </div>
+            <div class="pic photos">
+                <img src="your photo10.jpg">
+            </div>
+            <div class="pic friends">
+                <img src="friends10.jpg">
+            </div>
+            <div class="pic classmates">
+                <img src="classmate10.jpg">
+            </div>
+            <div class="pic family">
+                <img src="family10.jpg">
+            </div>
+
+            
+
+        </div>
+
+    </div>
+
+</body>
+</html>
